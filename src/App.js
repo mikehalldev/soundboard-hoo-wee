@@ -22,36 +22,36 @@ class Board extends React.Component {
       audio: {
         sound: null,
         soundName: null,
-        currentlyPlaying: null 
+        currentlyPlaying: null
       }
     }
   }
-  
+
   playSound(id) {
     if (this.state.audio.currentlyPlaying) {
       let snd = this.state.audio.sound;
       snd.pause();
     }
-    let sound = this.props.sounds.find(sound => { return sound.id === id});
+    let sound = this.props.sounds.find(sound => { return sound.id === id });
     let snd = new Audio(sound.soundURL);
-    this.setState({ audio: { sound: snd, soundName: sound.soundName, currentlyPlaying: true }});
+    this.setState({ audio: { sound: snd, soundName: sound.soundName, currentlyPlaying: true } });
     snd.play();
-    
+
     let data = [...this.props.sounds];
     const index = data.findIndex(obj => obj.soundName === sound.soundName);
     data[index].isPlaying = true;
     this.setState(data);
-    
+
     snd.addEventListener('ended', this.soundListener.bind(this, data, index, snd));
   }
-  
+
   soundListener(data, index, snd) {
-    const newData = [ ...data ];
+    const newData = [...data];
     newData[index].isPlaying = false;
     this.setState(newData);
     snd.removeEventListener('ended', this.soundListener);
-  } 
-  
+  }
+
   renderSounds() {
     return this.props.sounds.map(sound => {
       return <Sound key={sound.id} sound={sound} audio={this.state.audio} playSound={this.playSound.bind(this)} />
@@ -91,27 +91,27 @@ class App extends React.Component {
     super(props);
     this.state = {
       sounds: [
-        {id: 1, soundName: '', soundURL: hoo, isPlaying: false},
-        {id: 2, soundName: '', soundURL: boy_oh_boy, isPlaying: false},
-        {id: 3, soundName: '', soundURL: f, isPlaying: false},
-        {id: 4, soundName: '', soundURL: yea, isPlaying: false},
-        {id: 5, soundName: '', soundURL: baby, isPlaying: false},
-        {id: 6, soundName: '', soundURL: oooo, isPlaying: false},
-        {id: 7, soundName: '', soundURL: woah_woah, isPlaying: false},
-        {id: 8, soundName: '', soundURL: wah_wah, isPlaying: false},
-        {id: 9, soundName: '', soundURL: WAH, isPlaying: false},
+        { id: 1, soundName: '', soundURL: hoo, isPlaying: false },
+        { id: 2, soundName: '', soundURL: boy_oh_boy, isPlaying: false },
+        { id: 3, soundName: '', soundURL: f, isPlaying: false },
+        { id: 4, soundName: '', soundURL: yea, isPlaying: false },
+        { id: 5, soundName: '', soundURL: baby, isPlaying: false },
+        { id: 6, soundName: '', soundURL: oooo, isPlaying: false },
+        { id: 7, soundName: '', soundURL: woah_woah, isPlaying: false },
+        { id: 8, soundName: '', soundURL: wah_wah, isPlaying: false },
+        { id: 9, soundName: '', soundURL: WAH, isPlaying: false },
       ]
     }
   }
-    render() {
-      return (
-        <div className="app">
-          <h1>Hooooo wee boy oh boy</h1>
-          <p>y'all should touch these squares</p>
-          <Board sounds={this.state.sounds} audio={this.state.audio} />
-        </div>
-      );
-    }
+  render() {
+    return (
+      <div className="app">
+        <h1 className="App-header">Hooooo boy oh boy</h1>
+        <p>y'all should turn your volume up andtouch these squares</p>
+        <Board sounds={this.state.sounds} audio={this.state.audio} />
+      </div>
+    );
+  }
 };
 
 
