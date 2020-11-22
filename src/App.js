@@ -105,7 +105,7 @@ class App extends React.Component {
   }
     render() {
       return (
-        <div>
+        <div className="app">
           <h1>Hooooo wee boy oh boy</h1>
           <p>y'all should touch these squares</p>
           <Board sounds={this.state.sounds} audio={this.state.audio} />
