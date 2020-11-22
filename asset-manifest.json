@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/soundboard-hoo-wee/static/css/main.57202478.chunk.css",
-    "main.js": "/soundboard-hoo-wee/static/js/main.96412ecb.chunk.js",
-    "main.js.map": "/soundboard-hoo-wee/static/js/main.96412ecb.chunk.js.map",
+    "main.js": "/soundboard-hoo-wee/static/js/main.33d1ada2.chunk.js",
+    "main.js.map": "/soundboard-hoo-wee/static/js/main.33d1ada2.chunk.js.map",
     "runtime-main.js": "/soundboard-hoo-wee/static/js/runtime-main.1a5cb605.js",
     "runtime-main.js.map": "/soundboard-hoo-wee/static/js/runtime-main.1a5cb605.js.map",
     "static/js/2.b706c849.chunk.js": "/soundboard-hoo-wee/static/js/2.b706c849.chunk.js",
@@ -26,6 +26,6 @@
     "static/js/runtime-main.1a5cb605.js",
     "static/js/2.b706c849.chunk.js",
     "static/css/main.57202478.chunk.css",
-    "static/js/main.96412ecb.chunk.js"
+    "static/js/main.33d1ada2.chunk.js"
   ]
 }
