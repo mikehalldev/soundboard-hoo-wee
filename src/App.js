@@ -91,15 +91,15 @@ class App extends React.Component {
     super(props);
     this.state = {
       sounds: [
-        { id: 1, soundName: '', soundURL: hoo, isPlaying: false },
-        { id: 2, soundName: '', soundURL: boy_oh_boy, isPlaying: false },
-        { id: 3, soundName: '', soundURL: f, isPlaying: false },
-        { id: 4, soundName: '', soundURL: yea, isPlaying: false },
-        { id: 5, soundName: '', soundURL: baby, isPlaying: false },
-        { id: 6, soundName: '', soundURL: oooo, isPlaying: false },
-        { id: 7, soundName: '', soundURL: woah_woah, isPlaying: false },
-        { id: 8, soundName: '', soundURL: wah_wah, isPlaying: false },
-        { id: 9, soundName: '', soundURL: WAH, isPlaying: false },
+        { id: 1, soundName: 'HOO', soundURL: hoo, isPlaying: false },
+        { id: 2, soundName: 'BOY', soundURL: boy_oh_boy, isPlaying: false },
+        { id: 3, soundName: 'F', soundURL: f, isPlaying: false },
+        { id: 4, soundName: 'YEA', soundURL: yea, isPlaying: false },
+        { id: 5, soundName: 'BB', soundURL: baby, isPlaying: false },
+        { id: 6, soundName: 'OOOO', soundURL: oooo, isPlaying: false },
+        { id: 7, soundName: 'WOAH WOAH', soundURL: woah_woah, isPlaying: false },
+        { id: 8, soundName: 'WAH WAH', soundURL: wah_wah, isPlaying: false },
+        { id: 9, soundName: 'WAH', soundURL: WAH, isPlaying: false },
       ]
     }
   }
