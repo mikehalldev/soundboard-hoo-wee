@@ -107,7 +107,7 @@ class App extends React.Component {
     return (
       <div className="app">
         <h1 className="App-header">Hooooo boy oh boy</h1>
-        <p>y'all should turn your volume up andtouch these squares</p>
+        <p>y'all should turn your volume up and touch these squares</p>
         <Board sounds={this.state.sounds} audio={this.state.audio} />
       </div>
     );
